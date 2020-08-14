@@ -6,39 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonallcomunas"
+        tools:layout_editor_absoluteX="33dp" />
     <Button
         android:id="@+id/buttonLascondes"
-        android:layout_width="142dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="243dp"
-        android:layout_marginBottom="593dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Filtrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/buttonallcomunas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Todas las comunas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
-        app:layout_constraintStart_toEndOf="@+id/buttonLascondes"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
-
-    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39"
-        tools:layout_editor_absoluteX="33dp" />
+        android:text="Todas las comunas"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLascondes"
+        tools:layout_editor_absoluteX="0dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

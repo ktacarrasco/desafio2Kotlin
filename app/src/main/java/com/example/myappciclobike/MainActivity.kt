@@ -3,6 +3,7 @@ package com.example.myappciclobike
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.TextKeyListener.clear
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ciromine.ciclobike.Ciclovia
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.cyclo_item_list.*
 import android.widget.Toast.makeText as toastMakeText
 
@@ -44,7 +47,8 @@ class MainActivity : AppCompatActivity() {
 
     filtrarlascondes.setOnClickListener(View.OnClickListener {
         Toast.makeText(this,"SOLO LAS CONDES", LENGTH_LONG).show()
-      //  when (nDataset) {
+
+        //  when (nDataset) {
 
         //val filtrarlascondes = String nDataset.filter { comuna ->comuna.equals("las condes") }
     //}
@@ -52,4 +56,6 @@ class MainActivity : AppCompatActivity() {
     })
 
     }
+
+
 }
