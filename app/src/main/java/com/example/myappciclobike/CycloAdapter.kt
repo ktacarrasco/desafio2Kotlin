@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.*
 import com.example.ciromine.ciclobike.Ciclovia
 
-class CycloAdapter (private  val listadoCiclos: MutableList<Ciclovia>): Adapter<CycloAdapter.CycloViewHolder>() {
-
+class CycloAdapter ( var listadoCiclos: MutableList<Ciclovia>): RecyclerView.Adapter<CycloAdapter.CycloViewHolder>() {
 
 
     class CycloViewHolder(itemView: View) : ViewHolder(itemView) {
@@ -29,9 +28,16 @@ class CycloAdapter (private  val listadoCiclos: MutableList<Ciclovia>): Adapter<
 
     }
 
+    fun updateList(list: MutableList<Ciclovia>){
+        //listadoCiclos = list
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: CycloViewHolder, position: Int) {
 
         holder.texviewComuna.text = listadoCiclos[position].comuna
         holder.texviewCyclo.text =  listadoCiclos[position].nombre
     }
 }
+
+

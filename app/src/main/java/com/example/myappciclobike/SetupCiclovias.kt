@@ -38,11 +38,13 @@ class SetupCiclovias {
             val ciclovia = Ciclovia(nombres[i], comunas[i])
             lista.add(ciclovia)
         }
-        return lista
+        return lista as ArrayList<Ciclovia>
     }
 
     fun init1() : List<Ciclovia>{
         return nombres.zip(comunas) as List<Ciclovia>
     }
+
+
 
 }
